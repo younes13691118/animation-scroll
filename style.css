@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Lilita+One&display=swap');
+/* 
+.kalam-light {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kalam-regular {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kalam-bold {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+*,
+*::after,
+*::before {
+  font-family: 'Lilita One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  /* background-color: rgb(219, 219, 219); */
+  background-image: url(img/alex-wing-caMpuKqCEwQ-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* filter: brightness(70%); */
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.container-fluid p {
+  font-family: 'Kalam', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.section {
+  max-width: 1000px;
+  /* border: 1px solid rgb(136, 136, 136); */
+  padding: 25px;
+  border-radius: 20px;
+  /* box-shadow: 3px 3px 10px 1px #00000045; */
+  margin-bottom: 25px;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+.section__number {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 50px;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  /* display: none; */
+  transform: translateX(-100px);
+  transition: all 0.3s ease-in;
+}
+.section__number.active {
+  display: block;
+  transform: translateX(0px);
+}
+.container-fluid section:nth-child(odd) {
+  transform: translateX(-2000px);
+}
+.container-fluid section:nth-child(even) {
+  transform: translateX(+2000px);
+}
+.container-fluid .section.active {
+  transform: translateX(0) !important;
+}
+.section__header {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+  padding-left: 80px;
+}
+.section__content {
+  font-size: 20px;
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+.section__footer {
+  color: white;
+}
+/* Glass Efect Start  */
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+/* Glass Efect End   */
